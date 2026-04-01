@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+    <h1>Serviços</h1>
+    <br>
+    <h3>Confira os nossos serviços</h3>
+
+    <table class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th>Serviço</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+      </tr>
+
+      <%- servicos.forEach(function(servico) { %>
+        <tr>
+          <td><%= servico.nome %></td>
+          <td><%= servico.descricao %></td>
+          <td>R$ <%= servico.preco.toFixed(2) %></td>
+        </tr>
+      <% }) %>
+    </table>
+   
+   <p><a href="/"> Voltar</a></p>
+    <%- include('partials/footer') %>
+
