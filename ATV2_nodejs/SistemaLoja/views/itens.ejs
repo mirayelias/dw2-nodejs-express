@@ -1,0 +1,34 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-header">
+            <h2>Itens</h2>
+        </div>
+        <div class="card-body">
+            <p>Confira equipamentos e artefatos usados pelos heróis da aventura.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% itens.forEach(item => { %>
+                    <tr>
+                        <td><%= item.nome %></td>
+                        <td><%= item.preco %> runas</td>
+                        <td><%= item.categoria %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="/">Voltar ao início</a>
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>

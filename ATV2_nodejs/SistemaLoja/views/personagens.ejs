@@ -1,0 +1,35 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+<div class="container">
+    <div class="card mt-3">
+        <div class="card-header">
+            <h2>Personagens</h2>
+        </div>
+        <div class="card-body">
+            <div class="personagem-image-wrapper">
+                <img src="/imgs/levi.png" alt="Levi" class="personagem-img">
+                <p class="text-muted mb-3">Levi, o cavaleiro, diretamente da imagem levi.png.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% personagens.forEach(personagem => { %>
+                    <tr>
+                        <td><%= personagem.nome %></td>
+                        <td><%= personagem.descricao %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <a class="btn btn-primary" href="/">Voltar ao início</a>
+        </div>
+    </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>
