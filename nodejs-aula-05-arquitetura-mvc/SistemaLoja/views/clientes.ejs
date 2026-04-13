@@ -4,7 +4,7 @@
         <div class="container">
             <div class="card">
                 <div class="card-header">
-                    <h1>Clientes</h1>
+                    <h1>Recordes</h1>
                 </div>
                 <div class="card-body">
                     <table>
@@ -12,22 +12,22 @@
                             <tr>
                                 <th></th>
                                 <th>Nome:</th>
-                                <th>CPF:</th>
-                                <th>Endereço:</th>
+                                <th>Tempo para zerar:</th>
+                                <th>Data do recorde:</th>
                             </tr>
                         </thead>
                         <tbody>
                             <% clientes.forEach(cliente=> { %>
                                 <tr>
-                                    <td><img src="imgs/avatar.png" width="30px"></td>
+                                    <td><img src="/imgs/avatar.png" width="30px" class="table-icon"></td>
                                     <td>
                                         <%= cliente.nome %>
                                     </td>
                                     <td>
-                                        <%= cliente.cpf %>
+                                        <%= cliente.tempoZerado %>
                                     </td>
                                     <td>
-                                        <%= cliente.endereco %>
+                                        <%= cliente.data %>
                                     </td>
                                 </tr>
                                 <% }) %>
